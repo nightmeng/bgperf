@@ -260,7 +260,7 @@ class Tester(Container):
         prev_pid = 0
         for lines in output:
             for line in lines.strip().split('\n'):
-                pid = int(line.split('|')[2])
+                pid = int(line.split('|')[1])
                 if pid != prev_pid:
                     prev_pid = pid
                     cnt += 1
